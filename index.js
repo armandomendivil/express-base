@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var user = require('./controller/user');
-var item = require('./controller/item');
+var auth = require('./controller/auth');
 
 var cors = require('cors');
 
@@ -20,12 +20,9 @@ app.get('/user/:id', user.get);
 app.put('/user/:id', user.put);
 app.delete('/user/:id', user.delete);
 
-// Items
-app.get('/items', item.list);
-app.post('/item', item.post);
-app.get('/item/:id', item.get);
-app.put('/item/:id', item.put);
-app.delete('/item/:id', item.delete);
+// app.post('/regiser', auth.post);
+app.post('/auth/register', auth.register);
+app.post('/auth/login', auth.login);
 
 app.listen(9000, function  () {
   console.log('Esuchando puerto 9000');

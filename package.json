@@ -11,9 +11,13 @@
   "author": "Armando Mendivil <armandomendivil.m@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^2.0.0",
     "body-parser": "1.18.2",
     "cors": "2.8.4",
     "express": "4.16.2",
-    "mongoose": "4.13.6"
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.22.1",
+    "mongoose": "4.13.6",
+    "validator": "^9.4.1"
   }
 }

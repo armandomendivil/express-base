@@ -58,6 +58,7 @@ class Base {
 
   async post(req, res) {
      var body = req.body;
+     console.log('BODY:', body);
 
      var model = new this[this.name](body);
      var result = await model.save();
